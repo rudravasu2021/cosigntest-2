@@ -1,0 +1,16 @@
+pipeline {
+  agent any
+  environment {
+    IMAGE_NAME='darinpope/jenkins-example-cosign'
+    IMAGE_VERSION='8.5-204'
+    COSIGN_PUBLIC_KEY=credentials('cosign-public-key')
+  }
+  stages {
+    stage('verify the container image') {
+      steps {
+        sh 'cosign version'
+        sh 'cosign verify --key $COSIGN_PUBLIC_KEY ghcr.io/$IMAGE_NAME:$IMAGE_VERSION'
+      }
+    }
+  }
+}
