@@ -10,11 +10,7 @@ pipeline {
     COSIGN_PRIVATE_KEY=credentials('cosign-privatekey')
   }
   stages {
-    stage('cleanup') {
-      steps {
-        sh 'docker system prune -a --volumes --force'
-      }
-    }
+
     stage('build image') {
       steps {
         sh 'docker build -t $IMAGE_NAME:$IMAGE_VERSION .'
