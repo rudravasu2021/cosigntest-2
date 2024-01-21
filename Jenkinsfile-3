@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+      label 'Node1'
+  }
   environment {
     IMAGE_NAME='rudravasu2021/cosigntest-v2'
     IMAGE_VERSION='2.2'
