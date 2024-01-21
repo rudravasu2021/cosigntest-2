@@ -1,9 +1,9 @@
 pipeline {
   agent any
   environment {
-    IMAGE_NAME='darinpope/jenkins-example-cosign'
-    IMAGE_VERSION='8.5-204'
-    COSIGN_PUBLIC_KEY=credentials('cosign-public-key')
+    IMAGE_NAME='rudravasu2021/cosigntest-v2'
+    IMAGE_VERSION='2.2'
+    COSIGN_PUBLIC_KEY=credentials('cosign-publickey')
   }
   stages {
     stage('verify the container image') {
