@@ -1,7 +1,5 @@
 pipeline {
-  agent {
-      label 'Node1'
-  }
+  agent any
   environment {
     GITHUB_TOKEN=credentials('github-token')
     IMAGE_NAME='rudravasu2021/cosigntest-v2'
