@@ -2,8 +2,8 @@ pipeline {
   agent any
   environment {
     GITHUB_TOKEN=credentials('github-token')
-    IMAGE_NAME='rudravasu2021/cosigntest-v2'
-    IMAGE_VERSION='2.2'
+    IMAGE_NAME='rudravasu2021/cosigntest-v5.5'
+    IMAGE_VERSION='9.6'
     COSIGN_PASSWORD=credentials('cosignpassword1')
     COSIGN_PRIVATE_KEY=credentials('cosign-privatekey')
   }
